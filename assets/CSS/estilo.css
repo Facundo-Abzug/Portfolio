@@ -18,11 +18,11 @@ img
 header
 {
     background-color: #40748A;
-    height: 100px;
+    height: 80px;
     text-align: center;
-    line-height: 100px;
+    line-height: 80px;
 
-    font-size: 50px;
+    font-size: 30px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
