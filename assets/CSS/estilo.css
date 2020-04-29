@@ -26,6 +26,7 @@ header
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+/*PIE DE PÁGINA*/
 footer
 {
     background-color: #40748A;
@@ -81,6 +82,8 @@ footer > p
     background-color: rgb(105, 105, 105);
 }
 
+/*PERFIL IZQUIERDA*/
+
 .perfil
 {
     background-color: #40748A;
@@ -99,6 +102,8 @@ footer > p
     line-height: 140px;
     margin-left: 15px;
 }
+
+/*PERFIL DERECHA*/
 
 .contenido
 {
