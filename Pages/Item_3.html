@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Nº 3 - Teclado o Mouse</title>
+</head>
+<body style="background-color: rgb(22, 68, 194);">
+
+    <!--BOTONES-->
+    <div>
+        <a href="./TP2.html" style="color: black; text-decoration: none;"><button style="font-size: 20px; font-family: 'Times New Roman', Times, serif; cursor: pointer;">VOLVER</button></a>
+    </div>
+    
+    <!--TITULO-->
+    <div style="font-size: 30px; background-color: rgb(170, 192, 255);">
+        <h1 style="text-align:center;">Teclado o Mouse</h1>
+    </div>
+    
+    <h2 style="background-color: rgb(170, 192, 255); text-align: center;">Cuando pasas el puntero sobre algún bloque va a cambiar de color</h2>
+    <!--BLOQUES-->
+    <div>
+
+        <div id="bloque_1" onmouseover="Cambio"  style="width: 200px; height: 200px; background-color: aliceblue; border: solid; border-radius: 25px; float: left; text-align: left; text-align: center; line-height: 200px;"><b>CÓDIGO</b></div>
+        
+        <div id="bloque_2" onmouseover="Cambio" style="width: 200px; height: 200px; background-color: aliceblue; border: solid; border-radius: 25px; float: left; margin-left: 350px; text-align: center; line-height: 200px;"><b>CÓDIGO</b></div>
+        
+        <div id="bloque_3" onmouseover="Cambio" style="width: 200px; height: 200px; background-color: aliceblue; border: solid; border-radius: 25px; float: right; text-align: center; line-height: 200px;"><b>CÓDIGO</b></div>
+    </div>    
+
+    <!--PROGRAMACIÓN-->
+    <script>
+        //BLOQUE 1
+        var div_1 = document.getElementById("bloque_1");
+        //RANDOM
+        function rand(numero)
+        {
+            return Math.floor(Math.random() * (numero+1));
+        }
+        //BLOQUE 1 CAMBIO DE COLOR RANDOM
+        div_1.onmouseover = function Cambio()
+        {
+            const color = "rgb(" + rand(255) + "," + rand(255) + "," + rand(255) + ")";
+            this.style.backgroundColor = color;
+
+            document.getElementById("bloque_1").innerHTML = color;
+        }
+
+
+        //BLOQUE 2
+        var div_2 = document.getElementById("bloque_2");
+        //RANDOM
+        function rand(numero)
+        {
+            return Math.floor(Math.random() * (numero+1));
+        }
+        //BLOQUE 2 CAMBIO DE COLOR RANDOM
+        div_2.onmouseover = function Cambio()
+        {
+            const color = "rgb(" + rand(255) + "," + rand(255) + "," + rand(255) + ")";
+            this.style.backgroundColor = color;
+
+            document.getElementById("bloque_2").innerHTML = color;
+        }
+
+
+        //BLOQUE 3
+        var div_3 = document.getElementById("bloque_3");
+        //RANDOM
+        function rand(numero)
+        {
+            return Math.floor(Math.random() * (numero+1));
+        }
+        //BLOQUE 3 CAMBIO DE COLOR RANDOM
+        div_3.onmouseover = function Cambio()
+        {
+            const color = "rgb(" + rand(255) + "," + rand(255) + "," + rand(255) + ")";
+            this.style.backgroundColor = color;
+
+            document.getElementById("bloque_3").innerHTML = color;
+        }
+    </script>
+</body>
+</html>

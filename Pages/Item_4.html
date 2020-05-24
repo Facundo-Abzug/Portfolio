@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Nº 4 - Formulario</title>
+</head>
+<body style="background-color: rgb(30, 92, 92);">
+    <!--BOTON-->
+    <div>
+        <a href="./TP2.html" style="color: black; text-decoration: none;"><button style="font-size: 20px; font-family: 'Times New Roman', Times, serif; cursor: pointer;">VOLVER</button></a>
+    </div>
+    
+    <!--TITULO-->
+    <div style="font-size: 30px;">
+        <h1 style="text-align:center;">Formulario</h1>
+        <h2 style="text-align:center; font-size: 20px;">1946 a 1964: BOOMER || 1965 a 1979: Generación X || 1980 a 1999: Millenial || 2000 a 2020: Generación Z</h2>
+    </div>
+
+    <!--FORMULARIO-->
+    <div style="border: solid; float: left; width: 400px; height: 300px; padding: 10px; background-color: rgb(49, 151, 151); border-radius: 10px;">
+
+        <!--CUADRO DE TEXTO-->
+        <div style="margin-bottom: 15px;">
+            <label>Nombre: </label><input type="text" id="nombre">
+        </div>
+        <!--CUADRO DE TEXTO-->
+        <div style="margin-bottom: 15px;">
+            <label>Apellido: </label><input type="text" id="apellido">
+        </div>
+        <!--CUADRO DE TEXTO-->
+        <div style="margin-bottom: 15px;">
+            <label>Año de nacimiento (solo año): </label><input type="number" id="año">
+        </div>
+        <!--BOTON-->
+        <div style="margin-bottom: 15px;">
+            <button onclick="texto()" style="font-size: 20px; font-family: 'Times New Roman', Times, serif; cursor: pointer;">CONFIRMAR</button>
+            <button onclick="borrar_texto()" style="font-size: 20px; font-family: 'Times New Roman', Times, serif; cursor: pointer;">BORRAR TEXTO</button>
+        </div>
+        
+    </div>
+
+    <div style="border: solid; border-radius: 10px; float: left; width: 400px; height: 300px; margin-left: 50px; padding: 10px; background-color: rgb(49, 151, 151);">
+        <h3 id="texto_impreso"></h3>
+    </div>
+
+    <script>
+
+        //FUNCION PARA EL BOTON QUE GENERA EL TEXTO
+        function texto()
+        {
+            var nombre = document.getElementById("nombre").value;
+            var apellido = document.getElementById("apellido").value;
+            var año = document.getElementById("año").value;
+
+            if(año <= 1945)
+            {
+                document.getElementById("texto_impreso").innerHTML="Hola " + nombre + " " + apellido + " " + "solo quiero decir que posiblemente ya no existas más o no sos de ninguna generación mencionada.";
+            }
+            else{
+                if(año >= 1946 && año <=1964)
+                {
+                    document.getElementById("texto_impreso").innerHTML="Hola " + nombre + " " + apellido + " " + "solo quiero decir que sos BOOMER.";
+                }
+                else{
+                    if(año >= 1965 && año <=1979)
+                    {
+                        document.getElementById("texto_impreso").innerHTML="Hola " + nombre + " " + apellido + " " + "solo quiero decir que sos de la Generación X.";
+                    }
+                    else{
+                        if(año >= 1980 && año <=1999)
+                        {
+                            document.getElementById("texto_impreso").innerHTML="Hola " + nombre + " " + apellido + " " + "solo quiero decir que sos Millenial.";
+                        }
+                        else{
+                            if(año >= 2000 && año <= 2020)
+                            {
+                                document.getElementById("texto_impreso").innerHTML="Hola " + nombre + " " + apellido + " " + "solo quiero decir que sos de la Generación Z.";
+                            }
+                            else{
+                                document.getElementById("texto_impreso").innerHTML="Hola " + nombre + " " + apellido + " " + "solo quiero decir que no naciste :D";
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //FUNCION BORRAR TEXTO
+        function borrar_texto()
+        {
+            document.getElementById("nombre").value="";
+            document.getElementById("apellido").value="";
+            document.getElementById("año").value="";
+            document.getElementById("texto_impreso").innerHTML="";
+        }
+    </script>
+</body>
+</html>

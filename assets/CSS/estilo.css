@@ -26,6 +26,15 @@ header
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+
+.Contenedor-Maximo
+{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
 /*PIE DE PÁGINA*/
 footer
 {
@@ -82,16 +91,25 @@ footer > p
     background-color: rgb(105, 105, 105);
 }
 
+.TP2
+{
+    background-color: rgb(110, 31, 0);
+}
+
+.TP2:hover
+{
+    background-color: rgb(160, 45, 0);
+}
+
 /*PERFIL IZQUIERDA*/
 
 .perfil
 {
     background-color: #40748A;
     margin-top: 15px;
-    margin-left: 10px;
     padding: 10px;
     border-radius: 15px;
-    width: 40%;
+    width: 35%;
     display: flex;
 
     font-size: 20px;
@@ -109,7 +127,6 @@ footer > p
 {
     background-color: #40748A;
     margin-top: 15px;
-    margin-left: 10px;
     padding: 10px;
     border-radius: 15px;
     width: 55%;
