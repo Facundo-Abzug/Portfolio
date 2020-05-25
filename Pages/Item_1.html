@@ -92,14 +92,22 @@
     <!--PROGRAMMING-->
     <script>
         var correctas = 0;
-        var incorrectas = 0;
+        var contestación_1 = 0;
+        var contestación_2 = 0;
+        var contestación_3 = 0;
+        var contestación_4 = 0;
+        var contestación_5 = 0;
 
         //PREGUNTA 1
         function pregunta_1 (){
             var respuesta_1 = document.getElementsByName("items_1");
 
             if(respuesta_1[3].checked){
-                correctas = correctas + 1;
+                contestación_1 = 1;
+            }
+            else
+            {
+                contestación_1 = 0;
             }
         }
 
@@ -108,7 +116,11 @@
             var respuesta_2 = document.getElementsByName("items_2");
 
             if(respuesta_2[0].checked){
-                correctas = correctas + 1;
+                contestación_2 = 1;
+            }
+            else
+            {
+                contestación_2 = 0;
             }
         }
 
@@ -117,7 +129,11 @@
             var respuesta_3 = document.getElementsByName("items_3");
 
             if(respuesta_3[4].checked){
-                correctas = correctas + 1;
+                contestación_3 = 1;
+            }
+            else
+            {
+                contestación_3 = 0;
             }
         }
 
@@ -126,7 +142,11 @@
             var respuesta_4 = document.getElementsByName("items_4");
 
             if(respuesta_4[0].checked){
-                correctas = correctas + 1;
+                contestación_4 = 1;
+            }
+            else
+            {
+                contestación_4 = 0;
             }
         }
 
@@ -135,12 +155,17 @@
             var respuesta_5 = document.getElementsByName("items_5");
 
             if(respuesta_5[2].checked){
-                correctas = correctas + 1;
+                contestación_5 = 1;
+            }
+            else
+            {
+                contestación_5 = 0;
             }
         }
-
+        
         //BOTON
         function correcion(){
+            correctas = contestación_1 + contestación_2 + contestación_3 + contestación_4 + contestación_5;
             alert("Respondiste " + correctas + " bien. Gracias por responder!!! :D")
         }
     </script>
