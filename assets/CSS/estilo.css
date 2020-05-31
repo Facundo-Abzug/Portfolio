@@ -101,6 +101,16 @@ footer > p
     background-color: rgb(160, 45, 0);
 }
 
+.Phaser
+{
+    background-color: rgb(132, 0, 144);
+}
+
+.Phaser:hover
+{
+    background-color: rgb(181, 0, 197);
+}
+
 /*PERFIL IZQUIERDA*/
 
 .perfil
